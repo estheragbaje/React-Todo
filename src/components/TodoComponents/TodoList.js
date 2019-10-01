@@ -11,7 +11,7 @@ class TodoList extends React.Component {
         {todos.map(todo => (
           <Todo
             isCompleted={todo.isCompleted}
-            id={todo.id}
+            todo={todo}
             onToggleComplete={onToggleComplete}
             title={todo.title}
           />

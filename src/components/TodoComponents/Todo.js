@@ -10,7 +10,7 @@ import React from "react";
 // <Todo isCompleted={true} id={23} title="..." onToggleComplete={...}/>
 class Todo extends React.Component {
   render() {
-    const { isCompleted, id, onToggleComplete, title } = this.props;
+    const { isCompleted, todo, onToggleComplete, title } = this.props;
     return (
       <li
         className="todo"
@@ -19,7 +19,7 @@ class Todo extends React.Component {
           cursor: "pointer",
           userSelect: "none"
         }}
-        onClick={() => onToggleComplete(id)}
+        onClick={() => onToggleComplete(todo)}
       >
         {title}
       </li>
